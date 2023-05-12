@@ -5,7 +5,8 @@ interface ResponseMessage {
     result: any
 }
 
-const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
+const httpTrigger: AzureFunction =
+    async function (context: Context, req: HttpRequest): Promise<void> {
     context.log('Total Cost HTTP trigger function processed a request.');
     
     const { quantity, unitPrice } = req.body;
@@ -15,7 +16,8 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
     if (!quantity || !unitPrice) {
         responseStatusCode = 400;
-        responseMessageBody.message = 'Bad request! The quantity & unitPrice not provided!'
+        responseMessageBody.message =
+            'Bad request! The quantity & unitPrice not provided!'
 
     } else {
         const totalCost = quantity * unitPrice;
