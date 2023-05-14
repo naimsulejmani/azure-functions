@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "route": "GetLeaveRequest/{id?}",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+   "name": "leaveRequestBlobIn",
+   "type": "blob",
+   "path": "leave-request/request/{id}.json",
+   "direction": "in"
+}
+  ],
+  "scriptFile": "../dist/HttpGetLeaveRequest/index.js"
+}

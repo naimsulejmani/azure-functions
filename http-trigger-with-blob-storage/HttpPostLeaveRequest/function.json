@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type":"blob",
+      "direction": "out",
+      "name":"leaveRequestBlob",
+      "path": "leave-request/request/{empId}-{name}-{surname}-{DateTime:yyyy-MM-dd}.json"
+    }
+  ],
+  "scriptFile": "../dist/HttpPostLeaveRequest/index.js"
+}
