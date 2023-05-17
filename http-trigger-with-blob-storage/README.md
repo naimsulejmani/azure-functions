@@ -3,6 +3,14 @@
 Install the necesseray packages:
 `npm i`
 
+Install azurite
+`npm install -g azurite`
+
+
+Start azurite in order to save blob there, you can change the default folder in windows, linux or mac!:
+`azurite --silent --location c:\azurite --debug c:\azurite\debug.log`
+
+
 Start the application:
 `npm start`
 
